@@ -1,14 +1,14 @@
 # language: pt
 Funcionalidade: Testes de login
 
-  Cenario: <nome_do_cenario>
+  Cenario: <acessando_login>
     Dado que o usuario está na tela de login
     Quando preenche o campo de <email> e <password>
     E clica no botão SIGN IN
     Então deve o usuario deve ter <resultado>
 
     Exemplos: 
-      | nome_do_cenario                                                                  | email                                                 | password                                              | resultado            |
+      | acessando_login                                                                  | email                                                 | password                                              | resultado            |
       | "Login válido com credenciais corretas"                                          | "rafamour03@gmail.com"                                | "Rascunho69#"                                         | "Login com sucesso"  |
       | "Login invalido com Email correto e password errado"                             | "rafamour03@gmail.com"                                | "Rascuno69*"                                          | "Login com invalido" |
       | "Login invalido com Email errado e password correto"                             | "rafaelmoura@gmail.com"                               | "Rascunho69#"                                         | "Login com invalido" |

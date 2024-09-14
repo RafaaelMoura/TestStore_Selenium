@@ -6,7 +6,7 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "src/test/java/features/2-login2.feature",
+        features = "src/test/java/features/header_3_access_login.feature",
         glue = "steps",
         plugin = {"pretty", "html:target/cucumber-reports"}
 )

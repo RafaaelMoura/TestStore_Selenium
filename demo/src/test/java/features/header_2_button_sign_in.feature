@@ -9,6 +9,5 @@ Funcionalidade: Testes de ícone login
     Então usuário deve ter acesso a <conta>
 
     Exemplos:
-    |nome do cenario                           | tela principal           | conta    | 
-    |"Que o usuário está na tela principal"    | "clica no botão sign in" | "sucesso"| 
-
+    |icone_login_clicavel                           | signIn                   | conta    | 
+    |"Que o usuário está na tela principal"         | "clica no botão sign in" | "sucesso"| 
