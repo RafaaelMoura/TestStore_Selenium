@@ -33,27 +33,22 @@ public class header_2_button_sign_in {
         driver.quit();
 
 }
-
 @Dado("que o usuário está na tela principal")
-public void que_o_usuário_está_na_tela_principal(){
+public void que_o_usuário_está_na_tela_principal() {
 
-    driver.get(url);
-
+   driver.get(url);
 }
+@Quando("ele clica no botão {string}")
+public void ele_clica_no_botão(String string) {
 
-@Quando("clica no botão <signIn>")
-public void clica_no_botão_sign_in() {
-    
     driver.findElement(By.className("user-info")).click();
 }
 @Então("usuário deve ter acesso a {string}")
 public void usuário_deve_ter_acesso_a(String conta) {
-    
-    if(conta == "sucesso"){
-        String validacao = driver.findElement(By.id("submit-login")).getText();
-        assertEquals("Sign in", validacao);
-    }
 
+    String validacao = driver.findElement(By.id("submit-login")).getText();
+    assertEquals("SIGN IN", validacao);
+   
 }
 
 

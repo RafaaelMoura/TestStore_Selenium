@@ -1,0 +1,18 @@
+@Dado("que o usuário esta na tela home do site")
+public void que_o_usuário_esta_na_tela_home_do_site() {
+    driver.get(url);
+}
+@Quando("ele tenta acessar o carrinho sem ter feito login")
+public void ele_tenta_acessar_o_carrinho_sem_ter_feito_login() {
+
+    driver.findElement(By.cssSelector(".shopping-cart"));
+
+}
+@Então("usuário deve ter vizualização do {string}")
+public void usuário_deve_ter_vizualização_do(String carrinho) {
+
+    if(carrinho == "sucesso"){
+       String validacao = driver.findElement(By.cssSelector("hidden-sm-down")).getText();
+        assertEquals("Cart", validacao); }
+
+}

@@ -32,20 +32,23 @@ public class header_1_button_contact_us {
         driver.quit();
 
 }
+
+
 @Dado("que o usuário está na tela principal <home>")
 public void que_o_usuário_está_na_tela_principal_home() {
   driver.get(url);
 }
-@Quando("clica no botão <contactUs>")
-public void clica_no_botão_contact_us() {
-   driver.findElement(By.id("contact-link")).click();
+@Quando("clica no botão {string}")
+public void clica_no_botão(String string) {
+  driver.findElement(By.id("contact-link")).click();
+    
 }
 @Então("usuario deve ter acesso a pagina de {string}")
 public void usuario_deve_ter_acesso_a_pagina_de(String contatos) {
 
-        String validacao = driver.getCurrentUrl();
-        assertEquals("https://teststore.automationtesting.co.uk/index.php?controller=contact", validacao);
-
+  String validacao = driver.getCurrentUrl();
+  assertEquals("https://teststore.automationtesting.co.uk/index.php?controller=contact", validacao);
+    
 }
 
 
